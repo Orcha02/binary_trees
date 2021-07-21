@@ -2,9 +2,9 @@
 #define _BINARY_TREES_H_
 
 #include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h> /* For (free) from Tree Printer, and (malloc) */
+#include <stdio.h> /* For (printf) from Tree Printer */
+#include <string.h> /* For (memset) from Tree Printer */
 
 /**
  * struct binary_tree_s - Binary tree node
@@ -53,5 +53,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree);
 /* Tree Relatives */
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+				     const binary_tree_t *second);
 
 #endif
